@@ -1,0 +1,34 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#wrapper {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 2em auto;
+    max-width: 900px;
+}
+#search-parameters, #results {
+    background-color: #f2f2f2;
+    min-height: 50px;
+    padding: 1em;
+    margin: 2em ;
+}
+label, input {
+    display: block;
+}
+header {
+    width: 100%;
+    padding: 3em;
+    background-image: url('../images/nyc.jpg');
+    background-size: 100% auto;
+    background-position: bottom;
+    min-height: 200px;
+
+}
+h1 {
+    text-align: center;
+    color: #fff;
+
+}
