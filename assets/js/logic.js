@@ -22,25 +22,37 @@ Experiment with console logging various fields. */
 
 ///
 console.log("TEST");
-//$(document).on("ready", function() {
+$(document).on("ready", function() {
     
 
 
 $("#submit").on('click', function(ev){
 	ev.preventDefault();
-        var query="university";
-        var records;
-        var startYear;
-        var endYear;
+        var query=$("#search").val();
+        var records=$("#records").val();
+        var startYear=$("#start-year").val();
+        var endYear=$("#end-year").val();
         var apiKey = "66b2b97b3a12440c9505e3662f4f2b47";
 
         var queryURL ="https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key="+ apiKey;
 
-        console.log('working sort of')
+        console.log('working sort of');
         if(query.trim() === ""){
             console.log("query is empty");
         } else{
             queryURL = queryURL + "&q="+query;
+        }
+ 
+        if(records.trim() === ""){
+            console.log("records is empty");
+        } else{
+            queryURL = queryURL + "&page="+records;
+        }
+        if(startYear.trim() !== ""){
+            queryURL = queryURL + "&begin_date="+startYear;
+        }
+        if(endYear.trim() !== ""){
+            queryURL = queryURL + "&end_date="+endYear;
         }
 /*
         if(records.trim() === ""){
@@ -59,6 +71,7 @@ $("#submit").on('click', function(ev){
 
         return false;
     });
+});
 
 
 
