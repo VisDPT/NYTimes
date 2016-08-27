@@ -26,7 +26,8 @@ console.log("TEST");
     
 
 
-$("#submit").on('click', function(){
+$("#submit").on('click', function(ev){
+	ev.preventDefault();
         var query="university";
         var records;
         var startYear;
