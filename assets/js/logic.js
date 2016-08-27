@@ -22,7 +22,7 @@ Experiment with console logging various fields. */
 
 ///
 console.log("TEST");
-//$(document).on("ready", function() {
+$(document).on("ready", function() {
     
 
 
@@ -36,7 +36,7 @@ $("#submit").on('click', function(ev){
 
         var queryURL ="https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key="+ apiKey;
 
-        console.log('working sort of')
+        console.log('working sort of');
         if(query.trim() === ""){
             console.log("query is empty");
         } else{
@@ -59,6 +59,7 @@ $("#submit").on('click', function(ev){
 
         return false;
     });
+});
 
 
 
