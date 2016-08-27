@@ -3,26 +3,59 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+body {
+    font-family: Arial, sans-serif;
+}
 #wrapper {
     border: 1px solid #ccc;
     padding: 1em;
     margin: 2em auto;
+    width: 100%;
     max-width: 900px;
 }
 #search-parameters, #results {
     background-color: #f2f2f2;
     min-height: 50px;
+    width: 100%;
     padding: 1em;
-    margin: 2em ;
+    margin: 2em auto;
 }
-label, input {
-    display: block;
+label {
+    clear: both;
+    width: 100%;
+    display: inline-block;
 }
+input {
+    margin-bottom: 1.5em;
+    width: 100%;
+    display: inline-block;
+    height: 30px;
+}
+button {
+    background-color: transparent;
+    border: 2px solid #2c4c77;
+    padding: 8px 18px;
+    text-transform: uppercase;
+    color: #2c4c77;
+    cursor: pointer;
+}
+button[type=submit] {
+    background-color: #2c4c77;
+    -webkit-box-shadow: 0 0 1px #ccc;
+    -moz-box-shadow: 0 0 1px #ccc;
+    box-shadow: 0 0 1px #ccc;
+    color: #fff;
+}
+button:hover {
+    opacity: 0.7;
+}
+
 header {
     width: 100%;
-    padding: 3em;
+    padding: 5em 0 3em;
     background-image: url('../images/nyc.jpg');
-    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: bottom;
     min-height: 200px;
 
@@ -30,5 +63,20 @@ header {
 h1 {
     text-align: center;
     color: #fff;
-
+    font-size: 2em;
+    text-transform: uppercase;
+}
+h2 {
+    margin-bottom: 2em;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+@media screen and (min-width: 700px) {
+    label {
+        width: 35%;
+    }
+    input {
+        width: 60%;
+    }
 }
